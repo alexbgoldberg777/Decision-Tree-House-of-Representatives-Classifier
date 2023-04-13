@@ -230,7 +230,7 @@ def compute_accuracy(training_set, test_set):
     predictions = make_predictions(training_set, test_set)
     
     for i in range(len(predictions)):
-        if training_set.iloc[i][16] == predictions[i][1]:
+        if test_set.iloc[i][16] == predictions[i][1]:
             number_correct += 1
     
     return number_correct / len(predictions)
